@@ -8,18 +8,14 @@ public class StudentDatabaseApp {
 		Scanner in = new Scanner(System.in);
 		System.out.print("Enter number of students: ");
 		int numOfStudents = in.nextInt();
-		StudentsCreator(numOfStudents,in);
+		StudentsCreator(numOfStudents);
 		
 	}
 	
-	public static void  StudentsCreator(int numOfStudents,Scanner in) {
+	public static void  StudentsCreator(int numOfStudents) {
 		if(numOfStudents > 0) {
 			for(int i = 0 ; i < numOfStudents ; i++) {
-				System.out.print("\nStudent Name : ");
-				String name = in.next();
-				System.out.print("\nStudents Year: ");
-				String year = in.next();
-				Student std = new Student(name,year);
+				Student std = new Student();
 			}
 		}
 	}
